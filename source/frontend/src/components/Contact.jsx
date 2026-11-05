@@ -4,7 +4,8 @@ import axios from "axios";
 import { PROFILE, SOCIALS } from "@/data";
 
 const EASE = [0.16, 1, 0.3, 1];
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const API = `${BACKEND_URL}/api`;
 
 export default function Contact() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
